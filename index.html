@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="崑山科技大學 115 學年度第 1 學期校務行事曆與個人綜合行程在線查詢系統">
+  <title>綜合行事曆系統 | Steve's Calendar</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="logo-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <div class="logo-text">
+          <h1>綜合行事曆</h1>
+          <span class="subtitle">崑山科技大學 & 個人行程管理者</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="btn-add-event" class="btn btn-primary">
+          <i class="fa-solid fa-plus"></i> 新增事項
+        </button>
+        <button id="btn-sync" class="btn btn-secondary" title="重置為初始資料">
+          <i class="fa-solid fa-rotate"></i> 重置預設
+        </button>
+        <button id="btn-export" class="btn btn-outline" title="導出 JSON 備份">
+          <i class="fa-solid fa-download"></i> 導出
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="main-layout">
+      <!-- Sidebar Control Panel -->
+      <aside class="sidebar">
+        <!-- Today Widget Card -->
+        <div class="widget-card today-card">
+          <div class="today-header">
+            <span id="today-day-name">TODAY</span>
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div class="today-date-number" id="today-date-num">--</div>
+          <div class="today-full-date" id="today-full-str">載入中...</div>
+        </div>
+
+        <!-- Upcoming Alert Summary Card -->
+        <div class="widget-card upcoming-widget">
+          <div class="widget-title">
+            <i class="fa-solid fa-bell text-warning"></i>
+            <span>未來 7 天提醒</span>
+            <span class="badge badge-counter" id="upcoming-count">0</span>
+          </div>
+          <div class="upcoming-list" id="upcoming-list-container">
+            <!-- Dynamic 7-day items -->
+          </div>
+        </div>
+
+        <!-- Filter Categories Card -->
+        <div class="widget-card categories-widget">
+          <div class="widget-title">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>類別篩選</span>
+          </div>
+          <div class="category-pills" id="category-pills-container">
+            <button class="pill active" data-cat="all">全部</button>
+            <button class="pill" data-cat="校務">校務</button>
+            <button class="pill" data-cat="註冊">註冊</button>
+            <button class="pill" data-cat="選課">選課</button>
+            <button class="pill" data-cat="考試">考試</button>
+            <button class="pill" data-cat="成績">成績</button>
+            <button class="pill" data-cat="放假">放假</button>
+            <button class="pill" data-cat="個人">個人</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content View Area -->
+      <main class="content-area">
+        <!-- View Toolbar -->
+        <div class="view-toolbar">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="search-input" placeholder="搜尋事件名稱、類別或關鍵字..." />
+          </div>
+
+          <div class="toolbar-right">
+            <div class="view-switcher">
+              <button class="view-btn active" id="view-month-btn">
+                <i class="fa-solid fa-calendar-days"></i> 月曆視圖
+              </button>
+              <button class="view-btn" id="view-list-btn">
+                <i class="fa-solid fa-list-check"></i> 列表視圖
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calendar Month View Container -->
+        <div id="month-view-container" class="view-pane active">
+          <div class="month-navigation">
+            <div class="nav-controls">
+              <button id="prev-month-btn" class="icon-btn"><i class="fa-solid fa-chevron-left"></i></button>
+              <h2 id="current-month-label">2026年 8月</h2>
+              <button id="next-month-btn" class="icon-btn"><i class="fa-solid fa-chevron-right"></i></button>
+              <button id="today-btn" class="btn btn-sm btn-outline">今天</button>
+            </div>
+            <div class="legend-bar">
+              <span class="dot cat-ksu"></span> 校務/學校行程
+              <span class="dot cat-user"></span> 個人事項
+              <span class="dot cat-holiday"></span> 放假
+            </div>
+          </div>
+
+          <div class="calendar-grid-header">
+            <div>日</div><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div>
+          </div>
+          <div class="calendar-grid" id="calendar-days-grid">
+            <!-- Dynamic calendar cells -->
+          </div>
+        </div>
+
+        <!-- List View Container -->
+        <div id="list-view-container" class="view-pane">
+          <div class="list-header">
+            <div class="list-stats">
+              共顯示 <span id="list-event-count" class="highlight">0</span> 項日程
+            </div>
+            <div class="filter-completed-toggle">
+              <label class="switch-label">
+                <input type="checkbox" id="hide-completed-checkbox">
+                <span class="slider round"></span>
+                <span class="label-text">隱藏已完成事項</span>
+              </label>
+            </div>
+          </div>
+          <div class="events-list-wrapper" id="events-list-container">
+            <!-- Dynamic list items -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Add / Edit Event Modal -->
+  <div class="modal-overlay" id="event-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title"><i class="fa-solid fa-calendar-plus"></i> 新增行程事項</h3>
+        <button class="close-btn" id="close-modal-btn">&times;</button>
+      </div>
+      <form id="event-form">
+        <div class="form-group">
+          <label for="event-title">事項標題 <span class="required">*</span></label>
+          <input type="text" id="event-title" required placeholder="例如：提出實習申請、部門開會..." />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="event-date">日期 <span class="required">*</span></label>
+            <input type="date" id="event-date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="event-category">分類 <span class="required">*</span></label>
+            <select id="event-category" required>
+              <option value="個人">個人</option>
+              <option value="校務">校務</option>
+              <option value="選課">選課</option>
+              <option value="考試">考試</option>
+              <option value="成績">成績</option>
+              <option value="註冊">註冊</option>
+              <option value="放假">放假</option>
+              <option value="申請">申請</option>
+              <option value="繳費">繳費</option>
+              <option value="紀念日">紀念日</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="event-source">資料來源 / 備註</label>
+          <input type="text" id="event-source" placeholder="例如：個人自訂、公司公文..." value="user" />
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cancel-modal-btn">取消</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> 儲存事項</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
