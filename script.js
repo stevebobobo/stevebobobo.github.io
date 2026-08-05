@@ -1,12 +1,9 @@
-// State Management
+// Original Calendar App Logic Ported to JS
 let eventsData = [];
-let currentCategory = 'all';
-let searchQuery = '';
-let currentView = 'month'; // 'month' or 'list'
-let currentDate = new Date(); // Current date object for calendar navigation
-let hideCompleted = false;
+let selectedEventId = null;
+let currentView = 'list'; // 'list' or 'month'
+let currentDate = new Date();
 
-// Default initial events data (Kun Shan University + Personal Events)
 const DEFAULT_EVENTS = [
   { "id": "ksu-20260801", "date": "2026-08-01", "title": "第 1 學期開始", "category": "校務", "target": "all", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260806", "date": "2026-08-06", "title": "碩士在職專班新生註冊", "category": "註冊", "target": "student", "source": "115學年第1學期行事曆", "completed": false },
@@ -43,372 +40,393 @@ const DEFAULT_EVENTS = [
   { "id": "ksu-20270131", "date": "2027-01-31", "title": "第 1 學期結束", "category": "校務", "target": "all", "source": "115學年第1學期行事曆", "completed": false }
 ];
 
-// Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
+  setupTodayHeader();
   loadEventsData();
-  setupTodayWidget();
   setupEventListeners();
-  renderUpcomingAlerts();
-  renderView();
+  render();
 });
 
-// Load events from LocalStorage or fallback to json / defaults
+function setupTodayHeader() {
+  const todayStr = formatDate(new Date());
+  document.getElementById('header-today-text').textContent = `今天：${todayStr}`;
+}
+
 function loadEventsData() {
   const localData = localStorage.getItem('steve_calendar_events');
   if (localData) {
     try {
       eventsData = JSON.parse(localData);
+      sortEvents();
       return;
-    } catch (e) {
-      console.error('Failed to parse localStorage events', e);
-    }
+    } catch (e) { console.error(e); }
   }
 
-  // Fetch events.json or fallback
   fetch('events.json')
     .then(res => res.json())
     .then(data => {
       eventsData = data;
+      sortEvents();
       saveEventsToLocal();
-      renderView();
-      renderUpcomingAlerts();
+      render();
     })
-    .catch(err => {
-      console.warn('Could not fetch events.json, using default fallback.', err);
+    .catch(() => {
       eventsData = [...DEFAULT_EVENTS];
+      sortEvents();
       saveEventsToLocal();
-      renderView();
-      renderUpcomingAlerts();
+      render();
     });
 }
 
 function saveEventsToLocal() {
+  sortEvents();
   localStorage.setItem('steve_calendar_events', JSON.stringify(eventsData));
 }
 
-// Setup Today Widget
-function setupTodayWidget() {
-  const now = new Date();
-  const daysOfWeek = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
-  document.getElementById('today-day-name').textContent = daysOfWeek[now.getDay()];
-  document.getElementById('today-date-num').textContent = now.getDate();
-  
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
-  document.getElementById('today-full-str').textContent = `${year}年${month}月${day}日`;
+function sortEvents() {
+  eventsData.sort((a, b) => {
+    if (a.date !== b.date) return a.date.localeCompare(b.date);
+    return (a.title || '').localeCompare(b.title || '');
+  });
 }
 
-// Setup Event Listeners
-function setupEventListeners() {
-  // Navigation View Switching
-  document.getElementById('view-month-btn').addEventListener('click', () => switchView('month'));
-  document.getElementById('view-list-btn').addEventListener('click', () => switchView('list'));
+function getVisibleEvents() {
+  const today = getZeroTimeDate(new Date());
+  const role = document.getElementById('role-select').value;
+  const showAllDays = document.getElementById('show-all-days-cb').checked;
+  const daysAhead = parseInt(document.getElementById('days-ahead-input').value, 10) || 30;
+  const showPast = document.getElementById('show-past-cb').checked;
+  const showCompleted = document.getElementById('show-completed-cb').checked;
+  const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
 
-  // Month Navigation
-  document.getElementById('prev-month-btn').addEventListener('click', () => {
-    currentDate.setMonth(currentDate.getMonth() - 1);
-    renderMonthCalendar();
-  });
-  document.getElementById('next-month-btn').addEventListener('click', () => {
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    renderMonthCalendar();
-  });
-  document.getElementById('today-btn').addEventListener('click', () => {
-    currentDate = new Date();
-    renderMonthCalendar();
-  });
+  const endDate = new Date(today);
+  endDate.setDate(today.getDate() + Math.max(1, daysAhead));
 
-  // Search Input
-  document.getElementById('search-input').addEventListener('input', (e) => {
-    searchQuery = e.target.value.toLowerCase().trim();
-    renderView();
-  });
+  return eventsData.filter(event => {
+    const eventDate = parseDate(event.date);
+    if (!eventDate) return false;
 
-  // Category Filter Pills
-  document.getElementById('category-pills-container').addEventListener('click', (e) => {
-    if (e.target.classList.contains('pill')) {
-      document.querySelectorAll('.category-pills .pill').forEach(p => p.classList.remove('active'));
-      e.target.classList.add('active');
-      currentCategory = e.target.dataset.cat;
-      renderView();
+    // Role filter
+    const target = event.target || 'all';
+    if (role === '教師視角' && target === 'student') return false;
+    if (role === '學生視角' && target === 'teacher') return false;
+
+    // Past & Days ahead filter
+    if (!showPast && eventDate < today) return false;
+    if (!showAllDays && eventDate > endDate) return false;
+    if (!showCompleted && event.completed) return false;
+
+    // Search filter
+    if (searchQuery) {
+      const matchTitle = (event.title || '').toLowerCase().includes(searchQuery);
+      const matchCat = (event.category || '').toLowerCase().includes(searchQuery);
+      if (!matchTitle && !matchCat) return false;
     }
-  });
 
-  // Hide Completed Checkbox
-  document.getElementById('hide-completed-checkbox').addEventListener('change', (e) => {
-    hideCompleted = e.target.checked;
-    renderListView();
-  });
-
-  // Modal Controls
-  const modal = document.getElementById('event-modal');
-  document.getElementById('btn-add-event').addEventListener('click', () => {
-    document.getElementById('event-form').reset();
-    document.getElementById('event-date').valueAsDate = new Date();
-    modal.classList.add('active');
-  });
-  document.getElementById('close-modal-btn').addEventListener('click', () => modal.classList.remove('active'));
-  document.getElementById('cancel-modal-btn').addEventListener('click', () => modal.classList.remove('active'));
-
-  // Form Submit
-  document.getElementById('event-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const newEvent = {
-      id: 'user-' + Date.now(),
-      title: document.getElementById('event-title').value.trim(),
-      date: document.getElementById('event-date').value,
-      category: document.getElementById('event-category').value,
-      source: document.getElementById('event-source').value.trim() || 'user',
-      completed: false
-    };
-    eventsData.push(newEvent);
-    saveEventsToLocal();
-    modal.classList.remove('active');
-    renderView();
-    renderUpcomingAlerts();
-  });
-
-  // Reset to Default
-  document.getElementById('btn-sync').addEventListener('click', () => {
-    if (confirm('確定要將行事曆重置為初始預設資料嗎？')) {
-      eventsData = [...DEFAULT_EVENTS];
-      saveEventsToLocal();
-      renderView();
-      renderUpcomingAlerts();
-    }
-  });
-
-  // Export JSON
-  document.getElementById('btn-export').addEventListener('click', () => {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(eventsData, null, 2));
-    const downloadAnchor = document.createElement('a');
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", "events_backup.json");
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
+    return true;
   });
 }
 
-// Switch View Mode
-function switchView(view) {
-  currentView = view;
-  document.getElementById('view-month-btn').classList.toggle('active', view === 'month');
-  document.getElementById('view-list-btn').classList.toggle('active', view === 'list');
-  document.getElementById('month-view-container').classList.toggle('active', view === 'month');
-  document.getElementById('list-view-container').classList.toggle('active', view === 'list');
-  renderView();
-}
-
-// Main Render Function
-function renderView() {
-  if (currentView === 'month') {
-    renderMonthCalendar();
+function render() {
+  if (currentView === 'list') {
+    renderTableList();
   } else {
-    renderListView();
+    renderMonthView();
   }
 }
 
-// Filter Helper
-function getFilteredEvents() {
-  return eventsData.filter(item => {
-    // Category match
-    const matchCat = (currentCategory === 'all') || (item.category === currentCategory);
-    // Search match
-    const matchSearch = !searchQuery || 
-      item.title.toLowerCase().includes(searchQuery) ||
-      (item.category && item.category.toLowerCase().includes(searchQuery)) ||
-      (item.source && item.source.toLowerCase().includes(searchQuery));
-    return matchCat && matchSearch;
-  });
-}
+function renderTableList() {
+  const tbody = document.getElementById('calendar-table-body');
+  tbody.innerHTML = '';
 
-// Render Upcoming 7 Days
-function renderUpcomingAlerts() {
-  const container = document.getElementById('upcoming-list-container');
-  container.innerHTML = '';
-  
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  const visibleList = getVisibleEvents();
+  const today = getZeroTimeDate(new Date());
 
-  const next7Days = new Date(today);
-  next7Days.setDate(today.getDate() + 7);
+  visibleList.forEach(event => {
+    const eventDate = parseDate(event.date);
+    const delta = Math.round((eventDate - today) / (1000 * 60 * 60 * 24));
 
-  const upcoming = eventsData.filter(item => {
-    if (item.completed) return false;
-    const itemDate = new Date(item.date);
-    return itemDate >= today && itemDate <= next7Days;
-  }).sort((a, b) => new Date(a.date) - new Date(b.date));
+    let distanceText = '';
+    if (delta < 0) {
+      distanceText = `${Math.abs(delta)} 天前`;
+    } else if (delta === 0) {
+      distanceText = '🔥 今天';
+    } else {
+      distanceText = `${delta} 天後`;
+    }
 
-  document.getElementById('upcoming-count').textContent = upcoming.length;
+    const statusText = event.completed ? '已完成 ✅' : '待辦 ⏳';
+    const category = event.category || '其他';
 
-  if (upcoming.length === 0) {
-    container.innerHTML = '<div style="color: var(--text-dim); font-size: 12px; text-align: center; padding: 12px;">未來 7 天內無待辦行程</div>';
-    return;
-  }
+    // Tags matching Python app rules
+    const classes = [];
+    if (event.completed) {
+      classes.push('row-done');
+    } else if (delta < 0) {
+      classes.push('row-past');
+    } else if (delta === 0) {
+      classes.push('row-today');
+    } else if (delta <= 3) {
+      classes.push('row-urgent');
+    }
 
-  upcoming.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'upcoming-item';
-    div.innerHTML = `
-      <div class="item-title">${escapeHtml(item.title)}</div>
-      <div class="item-meta">
-        <span><i class="fa-regular fa-calendar"></i> ${item.date}</span>
-        <span class="tag-badge" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">${item.category}</span>
-      </div>
+    if (category === '放假') classes.push('row-holiday');
+    else if (category === '考試') classes.push('row-exam');
+    else if (category === '成績') classes.push('row-grade');
+    else if (['校務', '課程', '開學'].includes(category)) classes.push('row-affairs');
+
+    if (event.id === selectedEventId) {
+      classes.push('selected');
+    }
+
+    const tr = document.createElement('tr');
+    tr.className = classes.join(' ');
+    tr.dataset.id = event.id;
+
+    tr.innerHTML = `
+      <td style="text-align: center; font-weight: 700;">${event.date}</td>
+      <td style="text-align: center; font-weight: 700;">${distanceText}</td>
+      <td style="text-align: center;">📌 ${category}</td>
+      <td style="font-weight: 600;">${escapeHtml(event.title)}</td>
+      <td style="text-align: center; font-weight: 700;">${statusText}</td>
+      <td style="text-align: center;">
+        <button class="btn btn-sm btn-warning" onclick="editEvent('${event.id}', event)">✏️</button>
+        <button class="btn btn-sm btn-danger" onclick="deleteEvent('${event.id}', event)">🗑️</button>
+      </td>
     `;
-    container.appendChild(div);
+
+    // Row selection and double click to toggle
+    tr.addEventListener('click', () => {
+      document.querySelectorAll('.calendar-table tbody tr').forEach(r => r.classList.remove('selected'));
+      tr.classList.add('selected');
+      selectedEventId = event.id;
+    });
+
+    tr.addEventListener('dblclick', () => {
+      toggleCompleteEvent(event.id);
+    });
+
+    tbody.appendChild(tr);
   });
+
+  document.getElementById('status-bar-text').textContent = 
+    `📊 顯示 ${visibleList.length} 筆事項（總計 ${eventsData.length} 筆）`;
 }
 
-// Render Month Calendar
-function renderMonthCalendar() {
-  const grid = document.getElementById('calendar-days-grid');
+function renderMonthView() {
+  const grid = document.getElementById('month-days-grid');
   grid.innerHTML = '';
 
   const year = currentDate.getFullYear();
-  const month = currentDate.getMonth(); // 0-indexed
+  const month = currentDate.getMonth();
 
   document.getElementById('current-month-label').textContent = `${year}年 ${month + 1}月`;
 
-  // First day of current month
-  const firstDayIndex = new Date(year, month, 1).getDay();
-  // Last date of current month
+  const firstDay = new Date(year, month, 1).getDay();
   const lastDate = new Date(year, month + 1, 0).getDate();
-  // Previous month last date
   const prevLastDate = new Date(year, month, 0).getDate();
 
-  const filteredEvents = getFilteredEvents();
+  const visibleList = getVisibleEvents();
   const todayStr = formatDate(new Date());
 
-  // Render Previous Month Padding Days
-  for (let x = firstDayIndex; x > 0; x--) {
-    const dayNum = prevLastDate - x + 1;
+  // Prev month padding
+  for (let x = firstDay; x > 0; x--) {
     const cell = document.createElement('div');
-    cell.className = 'day-cell other-month';
-    cell.innerHTML = `<div class="day-num">${dayNum}</div>`;
+    cell.className = 'grid-cell other-month';
+    cell.innerHTML = `<div class="cell-num">${prevLastDate - x + 1}</div>`;
     grid.appendChild(cell);
   }
 
-  // Render Current Month Days
-  for (let i = 1; i <= lastDate; i++) {
+  // Current month
+  for (let d = 1; d <= lastDate; d++) {
     const monthStr = String(month + 1).padStart(2, '0');
-    const dayStr = String(i).padStart(2, '0');
-    const fullDateStr = `${year}-${monthStr}-${dayStr}`;
+    const dayStr = String(d).padStart(2, '0');
+    const fullDate = `${year}-${monthStr}-${dayStr}`;
 
     const cell = document.createElement('div');
-    cell.className = 'day-cell';
-    if (fullDateStr === todayStr) {
-      cell.classList.add('today');
-    }
+    cell.className = 'grid-cell';
+    if (fullDate === todayStr) cell.classList.add('is-today');
 
-    let innerHTML = `<div class="day-num"><span>${i}</span></div><div class="cell-events">`;
+    let cellHTML = `<div class="cell-num">${d}</div>`;
 
-    const dayEvents = filteredEvents.filter(e => e.date === fullDateStr);
-    dayEvents.forEach(evt => {
-      let chipClass = 'chip-ksu';
-      if (evt.category === '放假') chipClass = 'chip-holiday';
-      else if (evt.category === '個人') chipClass = 'chip-user';
-      else if (evt.category === '考試') chipClass = 'chip-exam';
-
-      const completedClass = evt.completed ? 'completed' : '';
-      innerHTML += `
-        <div class="event-chip ${chipClass} ${completedClass}" title="${escapeHtml(evt.title)}" onclick="toggleEventStatus('${evt.id}')">
-          ${escapeHtml(evt.title)}
-        </div>
-      `;
+    const dayEvents = visibleList.filter(e => e.date === fullDate);
+    dayEvents.forEach(e => {
+      cellHTML += `<div class="cell-item ${e.completed ? 'done' : ''}" title="${escapeHtml(e.title)}" onclick="toggleCompleteEvent('${e.id}')">${escapeHtml(e.title)}</div>`;
     });
 
-    innerHTML += `</div>`;
-    cell.innerHTML = innerHTML;
+    cell.innerHTML = cellHTML;
     grid.appendChild(cell);
   }
 }
 
-// Render List View
-function renderListView() {
-  const container = document.getElementById('events-list-container');
-  container.innerHTML = '';
+function setupEventListeners() {
+  // Filters trigger refresh
+  ['role-select', 'show-all-days-cb', 'days-ahead-input', 'show-past-cb', 'show-completed-cb'].forEach(id => {
+    document.getElementById(id).addEventListener('change', render);
+    document.getElementById(id).addEventListener('input', render);
+  });
 
-  let filtered = getFilteredEvents();
-  if (hideCompleted) {
-    filtered = filtered.filter(item => !item.completed);
-  }
+  document.getElementById('btn-refresh').addEventListener('click', render);
+  document.getElementById('search-input').addEventListener('input', render);
 
-  // Sort by date ascending
-  filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+  // Tabs
+  document.getElementById('tab-list-btn').addEventListener('click', () => switchTab('list'));
+  document.getElementById('tab-month-btn').addEventListener('click', () => switchTab('month'));
 
-  document.getElementById('list-event-count').textContent = filtered.length;
+  // Month Controls
+  document.getElementById('prev-month-btn').addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderMonthView();
+  });
+  document.getElementById('next-month-btn').addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderMonthView();
+  });
+  document.getElementById('today-month-btn').addEventListener('click', () => {
+    currentDate = new Date();
+    renderMonthView();
+  });
 
-  if (filtered.length === 0) {
-    container.innerHTML = '<div style="color: var(--text-dim); text-align: center; padding: 40px;">未找到符合條件的行程事項</div>';
-    return;
-  }
+  // Action Buttons
+  document.getElementById('btn-add-event').addEventListener('click', () => {
+    document.getElementById('modal-title').textContent = '➕ 新增事項';
+    document.getElementById('event-id-hidden').value = '';
+    document.getElementById('event-form').reset();
+    document.getElementById('event-date').value = formatDate(new Date());
+    document.getElementById('event-modal').classList.add('active');
+  });
 
-  filtered.forEach(evt => {
-    const itemDiv = document.createElement('div');
-    itemDiv.className = `list-item ${evt.completed ? 'done' : ''}`;
-    
-    let catBg = 'rgba(56, 189, 248, 0.2)';
-    let catFg = '#7dd3fc';
-    if (evt.category === '放假') { catBg = 'rgba(244, 63, 94, 0.2)'; catFg = '#fca5a5'; }
-    else if (evt.category === '個人') { catBg = 'rgba(192, 132, 252, 0.2)'; catFg = '#e9d5ff'; }
-    else if (evt.category === '考試') { catBg = 'rgba(251, 191, 36, 0.2)'; catFg = '#fde68a'; }
+  document.getElementById('btn-toggle-done').addEventListener('click', () => {
+    if (!selectedEventId) {
+      alert('請先選取一個事項。');
+      return;
+    }
+    toggleCompleteEvent(selectedEventId);
+  });
 
-    itemDiv.innerHTML = `
-      <div class="list-item-left">
-        <div class="checkbox-custom" onclick="toggleEventStatus('${evt.id}')">
-          <i class="fa-solid fa-check"></i>
-        </div>
-        <div class="event-details">
-          <span class="event-title-text">${escapeHtml(evt.title)}</span>
-          <div class="event-sub-meta">
-            <span><i class="fa-regular fa-calendar"></i> ${evt.date}</span>
-            <span><i class="fa-solid fa-tag"></i> ${evt.category}</span>
-            <span><i class="fa-solid fa-circle-info"></i> ${escapeHtml(evt.source || '無')}</span>
-          </div>
-        </div>
-      </div>
-      <div class="action-btns">
-        <span class="tag-badge" style="background: ${catBg}; color: ${catFg};">${evt.category}</span>
-        <button class="icon-btn" onclick="deleteEvent('${evt.id}')" title="刪除事項">
-          <i class="fa-solid fa-trash-can" style="color: #f43f5e;"></i>
-        </button>
-      </div>
-    `;
+  document.getElementById('btn-export-json').addEventListener('click', () => {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(eventsData, null, 2));
+    const a = document.createElement('a');
+    a.href = dataStr;
+    a.download = "events.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
 
-    container.appendChild(itemDiv);
+  document.getElementById('btn-reset-default').addEventListener('click', () => {
+    if (confirm('確定要將行事曆重置為初始預設資料嗎？')) {
+      eventsData = [...DEFAULT_EVENTS];
+      saveEventsToLocal();
+      render();
+    }
+  });
+
+  // Modal Controls
+  document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+  document.getElementById('cancel-modal-btn').addEventListener('click', closeModal);
+
+  document.getElementById('event-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const editId = document.getElementById('event-id-hidden').value;
+    const dateVal = document.getElementById('event-date').value;
+    const titleVal = document.getElementById('event-title').value.trim();
+    const categoryVal = document.getElementById('event-category').value;
+
+    if (editId) {
+      const item = eventsData.find(x => x.id === editId);
+      if (item) {
+        item.date = dateVal;
+        item.title = titleVal;
+        item.category = categoryVal;
+      }
+    } else {
+      const newEvt = {
+        id: 'user-' + Date.now(),
+        date: dateVal,
+        title: titleVal,
+        category: categoryVal,
+        target: 'teacher',
+        source: 'user',
+        completed: false
+      };
+      eventsData.push(newEvt);
+    }
+
+    saveEventsToLocal();
+    closeModal();
+    render();
   });
 }
 
-// Toggle Complete Status
-window.toggleEventStatus = function(id) {
-  const target = eventsData.find(e => e.id === id);
-  if (target) {
-    target.completed = !target.completed;
+function switchTab(tab) {
+  currentView = tab;
+  document.getElementById('tab-list-btn').classList.toggle('active', tab === 'list');
+  document.getElementById('tab-month-btn').classList.toggle('active', tab === 'month');
+  document.getElementById('view-list-container').classList.toggle('active', tab === 'list');
+  document.getElementById('view-month-container').classList.toggle('active', tab === 'month');
+  render();
+}
+
+function closeModal() {
+  document.getElementById('event-modal').classList.remove('active');
+}
+
+window.toggleCompleteEvent = function(id) {
+  const item = eventsData.find(x => x.id === id);
+  if (item) {
+    item.completed = !item.completed;
     saveEventsToLocal();
-    renderView();
-    renderUpcomingAlerts();
+    render();
   }
 };
 
-// Delete Event
-window.deleteEvent = function(id) {
-  if (confirm('確定要刪除此行程事項嗎？')) {
-    eventsData = eventsData.filter(e => e.id !== id);
+window.editEvent = function(id, e) {
+  if (e) e.stopPropagation();
+  const item = eventsData.find(x => x.id === id);
+  if (!item) return;
+
+  document.getElementById('modal-title').textContent = '✏️ 編輯事項';
+  document.getElementById('event-id-hidden').value = item.id;
+  document.getElementById('event-date').value = item.date;
+  document.getElementById('event-title').value = item.title;
+  document.getElementById('event-category').value = item.category || '個人';
+  document.getElementById('event-modal').classList.add('active');
+};
+
+window.deleteEvent = function(id, e) {
+  if (e) e.stopPropagation();
+  const item = eventsData.find(x => x.id === id);
+  if (!item) return;
+
+  if (item.source !== 'user') {
+    alert('保留行事曆資料，基礎事項不直接刪除；可將它標記為完成。');
+    return;
+  }
+
+  if (confirm(`確定刪除「${item.title}」？`)) {
+    eventsData = eventsData.filter(x => x.id !== id);
     saveEventsToLocal();
-    renderView();
-    renderUpcomingAlerts();
+    render();
   }
 };
 
-// Utilities
-function formatDate(dateObj) {
-  const y = dateObj.getFullYear();
-  const m = String(dateObj.getMonth() + 1).padStart(2, '0');
-  const d = String(dateObj.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
+function parseDate(str) {
+  if (!str) return null;
+  const parts = str.split('-');
+  if (parts.length !== 3) return null;
+  return new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+}
+
+function getZeroTimeDate(d) {
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+
+function formatDate(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
 }
 
 function escapeHtml(str) {
