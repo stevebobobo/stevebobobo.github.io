@@ -5,7 +5,7 @@
     "title": "第 1 學期開始",
     "category": "校務",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -14,7 +14,7 @@
     "title": "碩士在職專班新生註冊",
     "category": "註冊",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -31,7 +31,7 @@
     "title": "二技、四技單獨招生新生註冊",
     "category": "註冊",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -40,7 +40,7 @@
     "title": "全體教師完成課程教學大綱輸入",
     "category": "校務",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -49,7 +49,7 @@
     "title": "暑修結束（09/02 前輸入成績）",
     "category": "成績",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -75,7 +75,7 @@
     "title": "全校學生非跨部網路選課開始",
     "category": "選課",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -84,7 +84,7 @@
     "title": "延修生就學貸款辦理期間開始（至 09/14）",
     "category": "申請",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -93,7 +93,7 @@
     "title": "導師會議／教師輔導知能研習；完全／混合式網路教學申請截止",
     "category": "校務",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -102,7 +102,7 @@
     "title": "跨部網路選課開始；延修生就業資料收件截止",
     "category": "選課",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -111,7 +111,7 @@
     "title": "開學、註冊、正式上課",
     "category": "開學",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -120,7 +120,7 @@
     "title": "跨部網路選課截止（中午 12 時）",
     "category": "選課",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -129,16 +129,16 @@
     "title": "中秋節放假",
     "category": "放假",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
     "id": "ksu-20260925b",
     "date": "2026-09-25",
-    "title": "選課結果以 KSU-IR 超級課表為準",
+    "title": "選課結果以學校超級課表為準",
     "category": "選課",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -147,7 +147,7 @@
     "title": "孔子誕辰紀念日放假",
     "category": "放假",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -156,7 +156,7 @@
     "title": "延修生自行下載繳費單（10/12 前完成繳費）",
     "category": "繳費",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -165,7 +165,7 @@
     "title": "國慶日補假",
     "category": "放假",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -174,7 +174,7 @@
     "title": "國慶日放假",
     "category": "放假",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -183,7 +183,7 @@
     "title": "臺灣光復暨金門古寧頭大捷紀念日",
     "category": "紀念日",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -192,7 +192,7 @@
     "title": "臺灣光復暨金門古寧頭大捷紀念日補假",
     "category": "放假",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -201,7 +201,7 @@
     "title": "加退選後補繳差額截止；未繳者回復原班課程",
     "category": "繳費",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -210,7 +210,7 @@
     "title": "各教學單位次學期開課／排課作業開始",
     "category": "校務",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -219,7 +219,7 @@
     "title": "期中評量開始（11/13 結束；11/20 前完成成績輸入）",
     "category": "考試",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -228,7 +228,7 @@
     "title": "轉系申請開始（至 12/11）",
     "category": "申請",
     "target": "student",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -237,7 +237,7 @@
     "title": "教師教學評量問卷填答開始（至 2027/01/01）",
     "category": "校務",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -246,7 +246,7 @@
     "title": "行憲紀念日放假",
     "category": "放假",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -255,7 +255,7 @@
     "title": "元旦放假",
     "category": "放假",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -264,7 +264,7 @@
     "title": "開放下學期課表（草案）網頁查詢",
     "category": "選課",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -273,7 +273,7 @@
     "title": "期末考試開始（01/15 結束）",
     "category": "考試",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -282,7 +282,7 @@
     "title": "成績輸入完畢",
     "category": "成績",
     "target": "teacher",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   },
   {
@@ -291,7 +291,7 @@
     "title": "第 1 學期結束",
     "category": "校務",
     "target": "all",
-    "source": "KSU 115學年第1學期行事曆",
+    "source": "115學年第1學期行事曆",
     "completed": false
   }
 ]
