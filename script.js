@@ -56,29 +56,41 @@ function setupTodayHeader() {
 }
 
 function loadEventsData() {
+  let localEvents = [];
   const localData = localStorage.getItem('steve_calendar_events');
   if (localData) {
     try {
-      eventsData = JSON.parse(localData);
+      localEvents = JSON.parse(localData);
+      eventsData = [...localEvents];
       sortEvents();
-      return;
+      render();
     } catch (e) { console.error(e); }
+  } else {
+    eventsData = [...DEFAULT_EVENTS];
+    sortEvents();
+    render();
   }
 
-  fetch('events.json')
+  fetch('events.json?v=' + Date.now())
     .then(res => res.json())
-    .then(data => {
-      eventsData = data;
+    .then(serverData => {
+      const mergedMap = new Map();
+      serverData.forEach(item => mergedMap.set(item.id, item));
+
+      localEvents.forEach(item => {
+        if (mergedMap.has(item.id)) {
+          mergedMap.get(item.id).completed = item.completed;
+        } else {
+          mergedMap.set(item.id, item);
+        }
+      });
+
+      eventsData = Array.from(mergedMap.values());
       sortEvents();
       saveEventsToLocal();
       render();
     })
-    .catch(() => {
-      eventsData = [...DEFAULT_EVENTS];
-      sortEvents();
-      saveEventsToLocal();
-      render();
-    });
+    .catch(e => console.error('Fetch events error:', e));
 }
 
 function saveEventsToLocal() {
