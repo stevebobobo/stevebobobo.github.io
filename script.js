@@ -7,6 +7,7 @@ let currentDate = new Date();
 const DEFAULT_EVENTS = [
   { "id": "ksu-20260801", "date": "2026-08-01", "title": "第 1 學期開始", "category": "校務", "target": "all", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260806", "date": "2026-08-06", "title": "碩士在職專班新生註冊", "category": "註冊", "target": "student", "source": "115學年第1學期行事曆", "completed": false },
+  { "id": "user-2026081101", "date": "2026-08-11", "title": "看接案平台", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-2026081401", "date": "2026-08-14", "title": "發行最後一版cpcStudio", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-2026081701", "date": "2026-08-17", "title": "檢查汽車水箱", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-2026081702", "date": "2026-08-17", "title": "給老家消毒用酒精", "category": "個人", "target": "all", "source": "user", "completed": false },
@@ -22,6 +23,10 @@ const DEFAULT_EVENTS = [
   { "id": "ksu-20260911", "date": "2026-09-11", "title": "導師會議／教師輔導知能研習；完全／混合式網路教學申請截止", "category": "校務", "target": "teacher", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260914b", "date": "2026-09-14", "title": "跨部網路選課開始；延修生就業資料收件截止", "category": "選課", "target": "student", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260914a", "date": "2026-09-14", "title": "開學、註冊、正式上課", "category": "開學", "target": "all", "source": "115學年第1學期行事曆", "completed": false },
+  { "id": "course-2026091601", "date": "2026-09-16", "title": "夜間部課程：夜四資工一A - 資訊工程導論（週三 12~13 堂、週四 13 堂）", "category": "課程", "target": "teacher", "source": "115學年第1學期課表", "completed": false },
+  { "id": "course-2026091701", "date": "2026-09-17", "title": "夜間部課程：夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）", "category": "課程", "target": "teacher", "source": "115學年第1學期課表", "completed": false },
+  { "id": "course-2026091801", "date": "2026-09-18", "title": "日間部課程：資工三A - 智慧能源與物聯網（週五 2,3,4 堂）", "category": "課程", "target": "teacher", "source": "115學年第1學期課表", "completed": false },
+  { "id": "course-2026091802", "date": "2026-09-18", "title": "日間部課程：資工三C(南向班) - 行動程式設計（週五 7~9 堂）", "category": "課程", "target": "teacher", "source": "115學年第1學期課表", "completed": false },
   { "id": "ksu-20260923", "date": "2026-09-23", "title": "跨部網路選課截止（中午 12 時）", "category": "選課", "target": "all", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260925a", "date": "2026-09-25", "title": "中秋節放假", "category": "放假", "target": "all", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260925b", "date": "2026-09-25", "title": "選課結果以學校超級課表為準", "category": "選課", "target": "student", "source": "115學年第1學期行事曆", "completed": false },

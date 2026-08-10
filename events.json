@@ -18,6 +18,15 @@
     "completed": false
   },
   {
+    "id": "user-2026081101",
+    "date": "2026-08-11",
+    "title": "看接案平台",
+    "category": "個人",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
     "id": "user-2026081401",
     "date": "2026-08-14",
     "title": "發行最後一版cpcStudio",
@@ -148,6 +157,42 @@
     "category": "開學",
     "target": "all",
     "source": "115學年第1學期行事曆",
+    "completed": false
+  },
+  {
+    "id": "course-2026091601",
+    "date": "2026-09-16",
+    "title": "夜間部課程：夜四資工一A - 資訊工程導論（週三 12~13 堂、週四 13 堂）",
+    "category": "課程",
+    "target": "teacher",
+    "source": "115學年第1學期課表",
+    "completed": false
+  },
+  {
+    "id": "course-2026091701",
+    "date": "2026-09-17",
+    "title": "夜間部課程：夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）",
+    "category": "課程",
+    "target": "teacher",
+    "source": "115學年第1學期課表",
+    "completed": false
+  },
+  {
+    "id": "course-2026091801",
+    "date": "2026-09-18",
+    "title": "日間部課程：資工三A - 智慧能源與物聯網（週五 2,3,4 堂）",
+    "category": "課程",
+    "target": "teacher",
+    "source": "115學年第1學期課表",
+    "completed": false
+  },
+  {
+    "id": "course-2026091802",
+    "date": "2026-09-18",
+    "title": "日間部課程：資工三C(南向班) - 行動程式設計（週五 7~9 堂）",
+    "category": "課程",
+    "target": "teacher",
+    "source": "115學年第1學期課表",
     "completed": false
   },
   {
