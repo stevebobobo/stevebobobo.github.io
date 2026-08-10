@@ -7,6 +7,7 @@ let currentDate = new Date();
 const DEFAULT_EVENTS = [
   { "id": "ksu-20260801", "date": "2026-08-01", "title": "第 1 學期開始", "category": "校務", "target": "all", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260806", "date": "2026-08-06", "title": "碩士在職專班新生註冊", "category": "註冊", "target": "student", "source": "115學年第1學期行事曆", "completed": false },
+  { "id": "user-2026081401", "date": "2026-08-14", "title": "發行最後一版cpcStudio", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-2026081701", "date": "2026-08-17", "title": "檢查汽車水箱", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-2026081702", "date": "2026-08-17", "title": "給老家消毒用酒精", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-20260804221250929243", "date": "2026-08-18", "title": "彰濱太空中心出差", "category": "個人", "source": "user", "completed": false },
