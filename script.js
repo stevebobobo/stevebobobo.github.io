@@ -7,10 +7,13 @@ let currentDate = new Date();
 const DEFAULT_EVENTS = [
   { "id": "ksu-20260801", "date": "2026-08-01", "title": "第 1 學期開始", "category": "校務", "target": "all", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260806", "date": "2026-08-06", "title": "碩士在職專班新生註冊", "category": "註冊", "target": "student", "source": "115學年第1學期行事曆", "completed": false },
+  { "id": "user-2026081701", "date": "2026-08-17", "title": "檢查汽車水箱", "category": "個人", "target": "all", "source": "user", "completed": false },
+  { "id": "user-2026081702", "date": "2026-08-17", "title": "給老家消毒用酒精", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-20260804221250929243", "date": "2026-08-18", "title": "彰濱太空中心出差", "category": "個人", "source": "user", "completed": false },
   { "id": "ksu-20260819", "date": "2026-08-19", "title": "二技、四技單獨招生新生註冊", "category": "註冊", "target": "student", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260828b", "date": "2026-08-28", "title": "全體教師完成課程教學大綱輸入", "category": "校務", "target": "teacher", "source": "115學年第1學期行事曆", "completed": false },
   { "id": "ksu-20260828a", "date": "2026-08-28", "title": "暑修結束（09/02 前輸入成績）", "category": "成績", "target": "teacher", "source": "115學年第1學期行事曆", "completed": false },
+  { "id": "user-2026083101", "date": "2026-08-31", "title": "檢查美國股票帳戶", "category": "個人", "target": "all", "source": "user", "completed": false },
   { "id": "user-20260804222130862693", "date": "2026-08-31", "title": "直得科技Resigned", "category": "個人", "target": "teacher", "source": "user", "completed": false },
   { "id": "user-20260804221406971452", "date": "2026-08-31", "title": "直德科技Resigned", "category": "個人", "source": "user", "completed": true },
   { "id": "ksu-20260907a", "date": "2026-09-07", "title": "全校學生非跨部網路選課開始", "category": "選課", "target": "student", "source": "115學年第1學期行事曆", "completed": false },
