@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "id": "ksu-20260801",
         "date": "2026-08-01",
@@ -169,36 +169,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-09-16-csintro-w-w01",
-        "date": "2026-09-16",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 01 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-09-17-csintro-th-w01",
-        "date": "2026-09-17",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 01 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-09-17-genai-w01",
-        "date": "2026-09-17",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 01 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-09-18-iot-w01",
         "date": "2026-09-18",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 01 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 01 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -207,16 +180,7 @@
     {
         "id": "course-2026-09-18-mobile-w01",
         "date": "2026-09-18",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 01 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-09-23-csintro-w-w02",
-        "date": "2026-09-23",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 02 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 01 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -232,27 +196,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-09-24-csintro-th-w02",
-        "date": "2026-09-24",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 02 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-09-24-genai-w02",
-        "date": "2026-09-24",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 02 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-09-25-iot-w02",
         "date": "2026-09-25",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 02 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 02 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -261,7 +207,7 @@
     {
         "id": "course-2026-09-25-mobile-w02",
         "date": "2026-09-25",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 02 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 02 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -295,36 +241,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-09-30-csintro-w-w03",
-        "date": "2026-09-30",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 03 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-01-csintro-th-w03",
-        "date": "2026-10-01",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 03 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-01-genai-w03",
-        "date": "2026-10-01",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 03 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-10-02-iot-w03",
         "date": "2026-10-02",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 03 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 03 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -333,7 +252,7 @@
     {
         "id": "course-2026-10-02-mobile-w03",
         "date": "2026-10-02",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 03 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 03 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -349,36 +268,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-10-07-csintro-w-w04",
-        "date": "2026-10-07",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 04 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-08-csintro-th-w04",
-        "date": "2026-10-08",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 04 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-08-genai-w04",
-        "date": "2026-10-08",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 04 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-10-09-iot-w04",
         "date": "2026-10-09",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 04 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 04 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -387,7 +279,7 @@
     {
         "id": "course-2026-10-09-mobile-w04",
         "date": "2026-10-09",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 04 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 04 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -412,36 +304,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-10-14-csintro-w-w05",
-        "date": "2026-10-14",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 05 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-15-csintro-th-w05",
-        "date": "2026-10-15",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 05 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-15-genai-w05",
-        "date": "2026-10-15",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 05 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-10-16-iot-w05",
         "date": "2026-10-16",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 05 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 05 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -450,34 +315,7 @@
     {
         "id": "course-2026-10-16-mobile-w05",
         "date": "2026-10-16",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 05 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-21-csintro-w-w06",
-        "date": "2026-10-21",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 06 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-22-csintro-th-w06",
-        "date": "2026-10-22",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 06 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-22-genai-w06",
-        "date": "2026-10-22",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 06 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 05 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -486,7 +324,7 @@
     {
         "id": "course-2026-10-23-iot-w06",
         "date": "2026-10-23",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 06 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 06 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -495,7 +333,7 @@
     {
         "id": "course-2026-10-23-mobile-w06",
         "date": "2026-10-23",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 06 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 06 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -520,36 +358,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-10-28-csintro-w-w07",
-        "date": "2026-10-28",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 07 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-29-csintro-th-w07",
-        "date": "2026-10-29",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 07 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-29-genai-w07",
-        "date": "2026-10-29",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 07 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-10-30-iot-w07",
         "date": "2026-10-30",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 07 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 07 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -558,7 +369,7 @@
     {
         "id": "course-2026-10-30-mobile-w07",
         "date": "2026-10-30",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 07 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 07 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -574,36 +385,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-11-04-csintro-w-w08",
-        "date": "2026-11-04",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 08 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-05-csintro-th-w08",
-        "date": "2026-11-05",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 08 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-05-genai-w08",
-        "date": "2026-11-05",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 08 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-11-06-iot-w08",
         "date": "2026-11-06",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 08 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 08 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -612,7 +396,7 @@
     {
         "id": "course-2026-11-06-mobile-w08",
         "date": "2026-11-06",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 08 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 08 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -637,36 +421,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-11-11-csintro-w-w09",
-        "date": "2026-11-11",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 09 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-12-csintro-th-w09",
-        "date": "2026-11-12",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 09 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-12-genai-w09",
-        "date": "2026-11-12",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 09 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-11-13-iot-w09",
         "date": "2026-11-13",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 09 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 09 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -675,34 +432,7 @@
     {
         "id": "course-2026-11-13-mobile-w09",
         "date": "2026-11-13",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 09 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-18-csintro-w-w10",
-        "date": "2026-11-18",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 10 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-19-csintro-th-w10",
-        "date": "2026-11-19",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 10 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-19-genai-w10",
-        "date": "2026-11-19",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 10 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 09 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -711,7 +441,7 @@
     {
         "id": "course-2026-11-20-iot-w10",
         "date": "2026-11-20",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 10 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 10 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -720,34 +450,7 @@
     {
         "id": "course-2026-11-20-mobile-w10",
         "date": "2026-11-20",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 10 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-25-csintro-w-w11",
-        "date": "2026-11-25",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 11 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-26-csintro-th-w11",
-        "date": "2026-11-26",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 11 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-11-26-genai-w11",
-        "date": "2026-11-26",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 11 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 10 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -756,7 +459,7 @@
     {
         "id": "course-2026-11-27-iot-w11",
         "date": "2026-11-27",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 11 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 11 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -765,7 +468,7 @@
     {
         "id": "course-2026-11-27-mobile-w11",
         "date": "2026-11-27",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 11 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 11 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -790,36 +493,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-12-02-csintro-w-w12",
-        "date": "2026-12-02",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 12 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-03-csintro-th-w12",
-        "date": "2026-12-03",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 12 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-03-genai-w12",
-        "date": "2026-12-03",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 12 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2026-12-04-iot-w12",
         "date": "2026-12-04",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 12 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 12 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -828,34 +504,7 @@
     {
         "id": "course-2026-12-04-mobile-w12",
         "date": "2026-12-04",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 12 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-09-csintro-w-w13",
-        "date": "2026-12-09",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 13 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-10-csintro-th-w13",
-        "date": "2026-12-10",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 13 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-10-genai-w13",
-        "date": "2026-12-10",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 13 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 12 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -864,7 +513,7 @@
     {
         "id": "course-2026-12-11-iot-w13",
         "date": "2026-12-11",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 13 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 13 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -873,34 +522,7 @@
     {
         "id": "course-2026-12-11-mobile-w13",
         "date": "2026-12-11",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 13 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-16-csintro-w-w14",
-        "date": "2026-12-16",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 14 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-17-csintro-th-w14",
-        "date": "2026-12-17",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 14 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-17-genai-w14",
-        "date": "2026-12-17",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 14 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 13 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -909,7 +531,7 @@
     {
         "id": "course-2026-12-18-iot-w14",
         "date": "2026-12-18",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 14 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 14 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -918,34 +540,7 @@
     {
         "id": "course-2026-12-18-mobile-w14",
         "date": "2026-12-18",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 14 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-23-csintro-w-w15",
-        "date": "2026-12-23",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 15 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-24-csintro-th-w15",
-        "date": "2026-12-24",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 15 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-24-genai-w15",
-        "date": "2026-12-24",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 15 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 14 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -954,7 +549,7 @@
     {
         "id": "course-2026-12-25-iot-w15",
         "date": "2026-12-25",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 15 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 15 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -963,7 +558,7 @@
     {
         "id": "course-2026-12-25-mobile-w15",
         "date": "2026-12-25",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 15 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 15 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -979,36 +574,9 @@
         "completed": false
     },
     {
-        "id": "course-2026-12-30-csintro-w-w16",
-        "date": "2026-12-30",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 16 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-31-csintro-th-w16",
-        "date": "2026-12-31",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 16 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-31-genai-w16",
-        "date": "2026-12-31",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 16 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2027-01-01-iot-w16",
         "date": "2027-01-01",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 16 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 16 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -1017,7 +585,7 @@
     {
         "id": "course-2027-01-01-mobile-w16",
         "date": "2027-01-01",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 16 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 16 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -1033,36 +601,9 @@
         "completed": false
     },
     {
-        "id": "course-2027-01-06-csintro-w-w17",
-        "date": "2027-01-06",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 17 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2027-01-07-csintro-th-w17",
-        "date": "2027-01-07",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 17 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2027-01-07-genai-w17",
-        "date": "2027-01-07",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 17 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2027-01-08-iot-w17",
         "date": "2027-01-08",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 17 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 17 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -1071,7 +612,7 @@
     {
         "id": "course-2027-01-08-mobile-w17",
         "date": "2027-01-08",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 17 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 17 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -1096,36 +637,9 @@
         "completed": false
     },
     {
-        "id": "course-2027-01-13-csintro-w-w18",
-        "date": "2027-01-13",
-        "title": "夜四資工一A - 資訊工程導論（週三 12~13 堂）[第 18 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2027-01-14-csintro-th-w18",
-        "date": "2027-01-14",
-        "title": "夜四資工一A - 資訊工程導論（週四 13 堂）[第 18 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2027-01-14-genai-w18",
-        "date": "2027-01-14",
-        "title": "夜四資工四A - 生成式AI基礎應用（週四 10~12 堂）[第 18 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
         "id": "course-2027-01-15-iot-w18",
         "date": "2027-01-15",
-        "title": "資工三A - 智慧能源與物聯網（週五 2,3,4 堂）[第 18 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 18 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -1134,7 +648,7 @@
     {
         "id": "course-2027-01-15-mobile-w18",
         "date": "2027-01-15",
-        "title": "資工三C(南向班) - 行動程式設計（週五 7~9 堂）[第 18 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 18 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
