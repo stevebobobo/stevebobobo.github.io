@@ -77,12 +77,12 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "ksu-20260828a",
+        "id": "user-20260828-chwa-download",
         "date": "2026-08-28",
-        "title": "暑修結束（09/02 前輸入成績）",
-        "category": "成績",
+        "title": "8/28前下載推薦的全華圖書電子檔 (智慧能源與物聯網、行動程式設計、生成式AI)",
+        "category": "課程",
         "target": "teacher",
-        "source": "115學年第1學期行事曆",
+        "source": "user",
         "completed": false
     },
     {
@@ -95,21 +95,22 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "user-20260828-chwa-download",
+        "id": "ksu-20260828a",
         "date": "2026-08-28",
-        "title": "8/28前下載推薦的全華圖書電子檔 (智慧能源與物聯網、行動程式設計、生成式AI)",
-        "category": "課程",
+        "title": "暑修結束（09/02 前輸入成績）",
+        "category": "成績",
         "target": "teacher",
-        "source": "user",
+        "source": "115學年第1學期行事曆",
         "completed": false
     },
     {
-        "id": "user-20260804221406971452",
+        "id": "user-2026083101",
         "date": "2026-08-31",
-        "title": "直德科技Resigned",
+        "title": "檢查美國股票帳戶",
         "category": "個人",
+        "target": "all",
         "source": "user",
-        "completed": true
+        "completed": false
     },
     {
         "id": "user-20260804222130862693",
@@ -121,13 +122,12 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "user-2026083101",
+        "id": "user-20260804221406971452",
         "date": "2026-08-31",
-        "title": "檢查美國股票帳戶",
+        "title": "直德科技Resigned",
         "category": "個人",
-        "target": "all",
         "source": "user",
-        "completed": false
+        "completed": true
     },
     {
         "id": "ksu-20260907a",
@@ -157,15 +157,6 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "ksu-20260914a",
-        "date": "2026-09-14",
-        "title": "開學、註冊、正式上課",
-        "category": "開學",
-        "target": "all",
-        "source": "115學年第1學期行事曆",
-        "completed": false
-    },
-    {
         "id": "ksu-20260914b",
         "date": "2026-09-14",
         "title": "跨部網路選課開始；延修生就業資料收件截止",
@@ -175,9 +166,27 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "ksu-20260914a",
+        "date": "2026-09-14",
+        "title": "開學、註冊、正式上課",
+        "category": "開學",
+        "target": "all",
+        "source": "115學年第1學期行事曆",
+        "completed": false
+    },
+    {
+        "id": "course-2026-09-15-integ-w01",
+        "date": "2026-09-15",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 01 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "course-2026-09-18-iot-w01",
         "date": "2026-09-18",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 01 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 01 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -186,7 +195,16 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-09-18-mobile-w01",
         "date": "2026-09-18",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 01 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 01 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-09-22-integ-w02",
+        "date": "2026-09-22",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 02 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -202,9 +220,18 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "ksu-20260925a",
+        "date": "2026-09-25",
+        "title": "中秋節放假",
+        "category": "放假",
+        "target": "all",
+        "source": "115學年第1學期行事曆",
+        "completed": false
+    },
+    {
         "id": "course-2026-09-25-iot-w02",
         "date": "2026-09-25",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 02 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 02 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -213,19 +240,10 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-09-25-mobile-w02",
         "date": "2026-09-25",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 02 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 02 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "ksu-20260925a",
-        "date": "2026-09-25",
-        "title": "中秋節放假",
-        "category": "放假",
-        "target": "all",
-        "source": "115學年第1學期行事曆",
         "completed": false
     },
     {
@@ -247,9 +265,18 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2026-09-29-integ-w03",
+        "date": "2026-09-29",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 03 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "course-2026-10-02-iot-w03",
         "date": "2026-10-02",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 03 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 03 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -258,7 +285,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-10-02-mobile-w03",
         "date": "2026-10-02",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 03 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 03 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -274,18 +301,9 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "course-2026-10-09-iot-w04",
-        "date": "2026-10-09",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 04 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-09-mobile-w04",
-        "date": "2026-10-09",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 04 週]",
+        "id": "course-2026-10-06-integ-w04",
+        "date": "2026-10-06",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 04 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -301,6 +319,24 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2026-10-09-iot-w04",
+        "date": "2026-10-09",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 04 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-10-09-mobile-w04",
+        "date": "2026-10-09",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 04 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "ksu-20261010",
         "date": "2026-10-10",
         "title": "國慶日放假",
@@ -310,9 +346,18 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2026-10-13-integ-w05",
+        "date": "2026-10-13",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 05 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "course-2026-10-16-iot-w05",
         "date": "2026-10-16",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 05 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 05 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -321,7 +366,16 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-10-16-mobile-w05",
         "date": "2026-10-16",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 05 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 05 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-10-20-integ-w06",
+        "date": "2026-10-20",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 06 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -330,7 +384,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-10-23-iot-w06",
         "date": "2026-10-23",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 06 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 06 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -339,7 +393,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-10-23-mobile-w06",
         "date": "2026-10-23",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 06 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 06 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -364,18 +418,9 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "course-2026-10-30-iot-w07",
-        "date": "2026-10-30",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 07 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-10-30-mobile-w07",
-        "date": "2026-10-30",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 07 週]",
+        "id": "course-2026-10-27-integ-w07",
+        "date": "2026-10-27",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 07 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -391,18 +436,27 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "course-2026-11-06-iot-w08",
-        "date": "2026-11-06",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 08 週]",
+        "id": "course-2026-10-30-iot-w07",
+        "date": "2026-10-30",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 07 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
         "completed": false
     },
     {
-        "id": "course-2026-11-06-mobile-w08",
-        "date": "2026-11-06",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 08 週]",
+        "id": "course-2026-10-30-mobile-w07",
+        "date": "2026-10-30",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 07 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-11-03-integ-w08",
+        "date": "2026-11-03",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 08 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -418,6 +472,24 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2026-11-06-iot-w08",
+        "date": "2026-11-06",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 08 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-11-06-mobile-w08",
+        "date": "2026-11-06",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 08 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "ksu-20261109",
         "date": "2026-11-09",
         "title": "期中評量開始（11/13 結束；11/20 前完成成績輸入）",
@@ -427,9 +499,18 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2026-11-10-integ-w09",
+        "date": "2026-11-10",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 09 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "course-2026-11-13-iot-w09",
         "date": "2026-11-13",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 09 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 09 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -438,7 +519,16 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-11-13-mobile-w09",
         "date": "2026-11-13",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 09 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 09 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-11-17-integ-w10",
+        "date": "2026-11-17",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 10 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -447,7 +537,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-11-20-iot-w10",
         "date": "2026-11-20",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 10 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 10 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -456,7 +546,16 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-11-20-mobile-w10",
         "date": "2026-11-20",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 10 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 10 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-11-24-integ-w11",
+        "date": "2026-11-24",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 11 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -465,7 +564,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-11-27-iot-w11",
         "date": "2026-11-27",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 11 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 11 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -474,7 +573,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-11-27-mobile-w11",
         "date": "2026-11-27",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 11 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 11 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -490,6 +589,15 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2026-12-01-integ-w12",
+        "date": "2026-12-01",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 12 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "ksu-20261201",
         "date": "2026-12-01",
         "title": "教師教學評量問卷填答開始（至 2027/01/01）",
@@ -501,7 +609,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-12-04-iot-w12",
         "date": "2026-12-04",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 12 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 12 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -510,7 +618,16 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-12-04-mobile-w12",
         "date": "2026-12-04",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 12 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 12 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-12-08-integ-w13",
+        "date": "2026-12-08",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 13 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -519,7 +636,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-12-11-iot-w13",
         "date": "2026-12-11",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 13 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 13 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -528,7 +645,16 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-12-11-mobile-w13",
         "date": "2026-12-11",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 13 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 13 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-12-15-integ-w14",
+        "date": "2026-12-15",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 14 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -537,7 +663,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-12-18-iot-w14",
         "date": "2026-12-18",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 14 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 14 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -546,25 +672,16 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2026-12-18-mobile-w14",
         "date": "2026-12-18",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 14 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 14 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
         "completed": false
     },
     {
-        "id": "course-2026-12-25-iot-w15",
-        "date": "2026-12-25",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 15 週]",
-        "category": "課程",
-        "target": "teacher",
-        "source": "115學年第1學期課表",
-        "completed": false
-    },
-    {
-        "id": "course-2026-12-25-mobile-w15",
-        "date": "2026-12-25",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 15 週]",
+        "id": "course-2026-12-22-integ-w15",
+        "date": "2026-12-22",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 15 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -580,18 +697,27 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
-        "id": "course-2027-01-01-iot-w16",
-        "date": "2027-01-01",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 16 週]",
+        "id": "course-2026-12-25-iot-w15",
+        "date": "2026-12-25",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 15 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
         "completed": false
     },
     {
-        "id": "course-2027-01-01-mobile-w16",
-        "date": "2027-01-01",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 16 週]",
+        "id": "course-2026-12-25-mobile-w15",
+        "date": "2026-12-25",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 15 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2026-12-29-integ-w16",
+        "date": "2026-12-29",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 16 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -607,9 +733,36 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2027-01-01-iot-w16",
+        "date": "2027-01-01",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 16 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2027-01-01-mobile-w16",
+        "date": "2027-01-01",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 16 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "course-2027-01-05-integ-w17",
+        "date": "2027-01-05",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 17 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "course-2027-01-08-iot-w17",
         "date": "2027-01-08",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 17 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 17 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -618,7 +771,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2027-01-08-mobile-w17",
         "date": "2027-01-08",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 17 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 17 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -643,9 +796,18 @@ const DEFAULT_EVENTS = [
         "completed": false
     },
     {
+        "id": "course-2027-01-12-integ-w18",
+        "date": "2027-01-12",
+        "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 18 週]",
+        "category": "課程",
+        "target": "teacher",
+        "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
         "id": "course-2027-01-15-iot-w18",
         "date": "2027-01-15",
-        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00）[第 18 週]",
+        "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 18 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
@@ -654,7 +816,7 @@ const DEFAULT_EVENTS = [
     {
         "id": "course-2027-01-15-mobile-w18",
         "date": "2027-01-15",
-        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20）[第 18 週]",
+        "title": "資工三C(南向班) - 行動程式設計（週五 15:30~18:20，I3302）[第 18 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
