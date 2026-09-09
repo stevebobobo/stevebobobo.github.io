@@ -466,6 +466,15 @@
         "completed": false
     },
     {
+        "id": "user-2026110601",
+        "date": "2026-11-06",
+        "title": "繳交 2026餐飲系_智慧雨林計畫 AI課程PPT",
+        "category": "課程",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
+    },
+    {
         "id": "course-2026-11-06-iot-w08",
         "date": "2026-11-06",
         "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 08 週]",
