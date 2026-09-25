@@ -860,5 +860,14 @@
         "target": "teacher",
         "source": "user",
         "completed": false
+    },
+    {
+        "id": "user-20260929-mojutech-briefing",
+        "date": "2026-09-29",
+        "title": "墨鉅智造公司工讀生說明會（資工系主任借課，4A同學受邀至13301教室，15:40~16:05）",
+        "category": "課程",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
     }
 ]
