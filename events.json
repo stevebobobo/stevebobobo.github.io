@@ -842,5 +842,23 @@
         "target": "all",
         "source": "115學年第1學期行事曆",
         "completed": false
+    },
+    {
+        "id": "user-20260929-ai-transform-briefing",
+        "date": "2026-09-29",
+        "title": "AI驅動產業升級｜企業AI轉型輔導說明會（成大產學創新總中心1001+1002會議室，上午10:00）",
+        "category": "活動",
+        "target": "all",
+        "source": "user",
+        "completed": false
+    },
+    {
+        "id": "user-20260929-culinary-smart-rainforest-meeting",
+        "date": "2026-09-29",
+        "title": "KSU餐飲系洪綺吟主任 - 智慧雨林工作會（12:30，1小時）",
+        "category": "課程",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
     }
 ]
