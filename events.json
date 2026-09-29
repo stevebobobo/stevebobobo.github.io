@@ -268,6 +268,33 @@
         "completed": false
     },
     {
+        "id": "user-20260929-ai-transform-briefing",
+        "date": "2026-09-29",
+        "title": "AI驅動產業升級｜企業AI轉型輔導說明會（成大產學創新總中心1001+1002會議室，上午10:00）",
+        "category": "活動",
+        "target": "all",
+        "source": "user",
+        "completed": false
+    },
+    {
+        "id": "user-20260929-culinary-smart-rainforest-meeting",
+        "date": "2026-09-29",
+        "title": "KSU餐飲系洪綺吟主任 - 智慧雨林工作會（12:30，1小時）",
+        "category": "課程",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
+    },
+    {
+        "id": "user-20260929-mojutech-briefing",
+        "date": "2026-09-29",
+        "title": "墨鉅智造公司工讀生說明會（資工系主任借課，4A同學受邀至13301教室，15:40~16:05）",
+        "category": "課程",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
+    },
+    {
         "id": "course-2026-10-02-iot-w03",
         "date": "2026-10-02",
         "title": "資工三A - 智慧能源與物聯網（週五 09:10~12:00，I2605）[第 03 週]",
@@ -367,12 +394,30 @@
         "completed": false
     },
     {
+        "id": "user-20261017-linglong",
+        "date": "2026-10-17",
+        "title": "靈龍嘉義演出（14:30）",
+        "category": "個人",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
+    },
+    {
         "id": "course-2026-10-20-integ-w06",
         "date": "2026-10-20",
         "title": "四資工四A - 資電整合實務（週二 13:30~16:20，I2605）[第 06 週]",
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "user-20261022-wanrun-final",
+        "date": "2026-10-22",
+        "title": "萬潤決賽",
+        "category": "個人",
+        "target": "teacher",
+        "source": "user",
         "completed": false
     },
     {
@@ -535,6 +580,15 @@
         "category": "課程",
         "target": "teacher",
         "source": "115學年第1學期課表",
+        "completed": false
+    },
+    {
+        "id": "user-20261119-axia-visit",
+        "date": "2026-11-19",
+        "title": "阿霞飯店校外教學（13:00~16:00）",
+        "category": "課程",
+        "target": "teacher",
+        "source": "user",
         "completed": false
     },
     {
@@ -841,33 +895,6 @@
         "category": "校務",
         "target": "all",
         "source": "115學年第1學期行事曆",
-        "completed": false
-    },
-    {
-        "id": "user-20260929-ai-transform-briefing",
-        "date": "2026-09-29",
-        "title": "AI驅動產業升級｜企業AI轉型輔導說明會（成大產學創新總中心1001+1002會議室，上午10:00）",
-        "category": "活動",
-        "target": "all",
-        "source": "user",
-        "completed": false
-    },
-    {
-        "id": "user-20260929-culinary-smart-rainforest-meeting",
-        "date": "2026-09-29",
-        "title": "KSU餐飲系洪綺吟主任 - 智慧雨林工作會（12:30，1小時）",
-        "category": "課程",
-        "target": "teacher",
-        "source": "user",
-        "completed": false
-    },
-    {
-        "id": "user-20260929-mojutech-briefing",
-        "date": "2026-09-29",
-        "title": "墨鉅智造公司工讀生說明會（資工系主任借課，4A同學受邀至13301教室，15:40~16:05）",
-        "category": "課程",
-        "target": "teacher",
-        "source": "user",
         "completed": false
     }
 ]
