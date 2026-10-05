@@ -483,6 +483,24 @@
         "source": "115學年第1學期課表",
         "completed": false
     },
+    {
+        "id": "user-20261028-yilan-ruisui",
+        "date": "2026-10-28",
+        "title": "宜蘭瑞穗家庭旅遊",
+        "category": "個人",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
+    },
+    {
+        "id": "user-20261029-yilan-ruisui",
+        "date": "2026-10-29",
+        "title": "宜蘭瑞穗家庭旅遊",
+        "category": "個人",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
+    },
     {
         "id": "ksu-20261030",
         "date": "2026-10-30",
