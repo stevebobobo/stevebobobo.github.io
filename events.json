@@ -950,5 +950,14 @@
         "target": "all",
         "source": "user",
         "completed": false
+    },
+    {
+        "id": "user-2026102401",
+        "date": "2026-10-24",
+        "title": "去新光三越中山店結束營業特賣會買 Polo 衫（10/30 結束；10/28-29 旅遊、10/30 整天課，10/24~26 連假是最後空檔）",
+        "category": "個人",
+        "target": "all",
+        "source": "user",
+        "completed": false
     }
 ]
