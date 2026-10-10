@@ -378,9 +378,15 @@ tr.row-past { color: #64748B; }
 .nav-btn:hover { background: #E2E8F0; }
 .btn-today { background: #4F46E5; color: #FFF; border-color: #4F46E5; }
 
+/* Narrow screens: scroll the grid horizontally instead of clipping it */
+.month-scroll {
+  overflow-x: auto;
+}
+
 .month-grid-header {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  min-width: 840px;
   text-align: center;
   font-weight: 700;
   background: #4F46E5;
@@ -391,7 +397,8 @@ tr.row-past { color: #64748B; }
 
 .month-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  min-width: 840px;
   gap: 1px;
   background: #CBD5E1;
   border: 1px solid #CBD5E1;
@@ -400,6 +407,7 @@ tr.row-past { color: #64748B; }
 .grid-cell {
   background: #FFF;
   min-height: 100px;
+  min-width: 0;
   padding: 6px;
   display: flex;
   flex-direction: column;
