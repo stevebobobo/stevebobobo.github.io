@@ -428,6 +428,7 @@ tr.row-past { color: #64748B; }
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
+  cursor: pointer;
 }
 .cell-item.done { text-decoration: line-through; opacity: 0.6; }
 
@@ -470,11 +471,22 @@ tr.row-past { color: #64748B; }
 .form-group label { font-size: 13px; font-weight: 700; color: #334155; }
 .req { color: #EF4444; }
 
-.form-group input, .form-group select {
+.form-group input, .form-group select, .form-group textarea {
   padding: 8px 12px;
   border: 1px solid #CBD5E1;
   border-radius: 6px;
   font-size: 14px;
+}
+.form-group textarea { font-family: inherit; resize: vertical; }
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
 }
 
 .modal-footer {
