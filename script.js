@@ -1065,7 +1065,7 @@ function renderMonthView() {
 
     const dayEvents = visibleList.filter(e => e.date === fullDate);
     dayEvents.forEach(e => {
-      cellHTML += `<div class="cell-item ${e.completed ? 'done' : ''}" title="${escapeHtml(e.title)}" onclick="toggleCompleteEvent('${e.id}')">${escapeHtml(e.title)}</div>`;
+      cellHTML += `<div class="cell-item ${e.completed ? 'done' : ''}" title="${escapeHtml(e.title)}" onclick="editEvent('${e.id}', event)">${escapeHtml(e.title)}</div>`;
     });
 
     cell.innerHTML = cellHTML;
@@ -1146,6 +1146,7 @@ function setupEventListeners() {
     const dateVal = document.getElementById('event-date').value;
     const titleVal = document.getElementById('event-title').value.trim();
     const categoryVal = document.getElementById('event-category').value;
+    const completedVal = document.getElementById('event-completed').checked;
 
     if (editId) {
       const item = eventsData.find(x => x.id === editId);
@@ -1153,6 +1154,7 @@ function setupEventListeners() {
         item.date = dateVal;
         item.title = titleVal;
         item.category = categoryVal;
+        item.completed = completedVal;
       }
     } else {
       const newEvt = {
@@ -1162,7 +1164,7 @@ function setupEventListeners() {
         category: categoryVal,
         target: 'teacher',
         source: 'user',
-        completed: false
+        completed: completedVal
       };
       eventsData.push(newEvt);
     }
@@ -1205,6 +1207,7 @@ window.editEvent = function(id, e) {
   document.getElementById('event-date').value = item.date;
   document.getElementById('event-title').value = item.title;
   document.getElementById('event-category').value = item.category || '個人';
+  document.getElementById('event-completed').checked = !!item.completed;
   document.getElementById('event-modal').classList.add('active');
 };
 
