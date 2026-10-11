@@ -18,6 +18,8 @@
   --slate: #56627A;
   --slate-tint: #EEF0F4;
   --marker: #FFF2B8;
+  --stripe: #EDF5FC;
+  --stripe-hover: #DDEBF7;
 
   --font-body: "Noto Sans TC", "Microsoft JhengHei UI", sans-serif;
   --font-num: "Barlow", "Noto Sans TC", sans-serif;
@@ -267,7 +269,8 @@ input[type="checkbox"] { accent-color: var(--accent); }
 }
 
 .calendar-table tbody tr { cursor: pointer; }
-.calendar-table tbody tr:hover { background: var(--desk); }
+.calendar-table tbody tr:nth-child(even) { background: var(--stripe); }
+.calendar-table tbody tr:hover { background: var(--stripe-hover); }
 
 /* Coloured edge on the date cell marks the kind of event */
 .col-date {
@@ -305,7 +308,7 @@ tr.kind-rest .col-date { border-left-color: var(--red); }
 .kind-due .cat-tag { background: var(--amber-tint); color: var(--amber); }
 .kind-rest .cat-tag { background: var(--red-tint); color: var(--red); }
 
-tr.row-today { background: var(--accent-tint); }
+.calendar-table tbody tr.row-today { background: var(--accent-tint); }
 tr.row-today .col-delta { color: var(--accent-dark); font-weight: 700; }
 tr.row-urgent .col-delta { color: var(--red); font-weight: 600; }
 tr.row-past td { color: var(--ink-3); }
