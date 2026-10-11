@@ -851,7 +851,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function setupTodayHeader() {
   const todayStr = formatDate(new Date());
-  document.getElementById('header-today-text').textContent = `今天：${todayStr}`;
+  document.getElementById('header-today-text').textContent = `${todayStr}(${WEEKDAY_NAMES[new Date().getDay()]})`;
 }
 
 function loadEventsData() {
@@ -964,12 +964,12 @@ function renderTableList() {
     if (delta < 0) {
       distanceText = `${Math.abs(delta)} 天前`;
     } else if (delta === 0) {
-      distanceText = '🔥 今天';
+      distanceText = '今天';
     } else {
       distanceText = `${delta} 天後`;
     }
 
-    const statusText = event.completed ? '已完成 ✅' : '待辦 ⏳';
+    const statusText = event.completed ? '已完成' : '待辦';
     const category = event.category || '其他';
 
     // Tags matching Python app rules
@@ -984,6 +984,7 @@ function renderTableList() {
       classes.push('row-urgent');
     }
 
+    classes.push('kind-' + categoryKind(category));
     if (category === '放假') classes.push('row-holiday');
     else if (category === '考試') classes.push('row-exam');
     else if (category === '成績') classes.push('row-grade');
@@ -998,14 +999,14 @@ function renderTableList() {
     tr.dataset.id = event.id;
 
     tr.innerHTML = `
-      <td style="text-align: center; font-weight: 700;">${event.date}</td>
-      <td style="text-align: center; font-weight: 700;">${distanceText}</td>
-      <td style="text-align: center;">📌 ${category}</td>
-      <td style="font-weight: 600;">${escapeHtml(event.title)}</td>
-      <td style="text-align: center; font-weight: 700;">${statusText}</td>
+      <td class="col-date">${event.date}<span class="col-weekday">(${WEEKDAY_NAMES[eventDate.getDay()]})</span></td>
+      <td class="col-delta">${distanceText}</td>
+      <td style="text-align: center;"><span class="cat-tag">${category}</span></td>
+      <td class="col-title">${escapeHtml(event.title)}</td>
+      <td class="col-status">${statusText}</td>
       <td style="text-align: center;">
-        <button class="btn btn-sm btn-warning" onclick="editEvent('${event.id}', event)">✏️</button>
-        <button class="btn btn-sm btn-danger" onclick="deleteEvent('${event.id}', event)">🗑️</button>
+        <button class="icon-btn" title="編輯" onclick="editEvent('${event.id}', event)"><i class="fa-solid fa-pen"></i></button>
+        <button class="icon-btn icon-btn-danger" title="刪除" onclick="deleteEvent('${event.id}', event)"><i class="fa-solid fa-trash-can"></i></button>
       </td>
     `;
 
@@ -1024,7 +1025,7 @@ function renderTableList() {
   });
 
   document.getElementById('status-bar-text').textContent = 
-    `📊 顯示 ${visibleList.length} 筆事項（總計 ${eventsData.length} 筆）`;
+    `顯示 ${visibleList.length} 筆事項（總計 ${eventsData.length} 筆）`;
 }
 
 function renderMonthView() {
@@ -1034,7 +1035,7 @@ function renderMonthView() {
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
 
-  document.getElementById('current-month-label').textContent = `${year}年 ${month + 1}月`;
+  document.getElementById('current-month-label').innerHTML = `<span class="ml-month">${month + 1}</span><span class="ml-unit">月</span><span class="ml-year">${year}</span>`;
 
   const firstDay = new Date(year, month, 1).getDay();
   const lastDate = new Date(year, month + 1, 0).getDate();
@@ -1065,7 +1066,7 @@ function renderMonthView() {
 
     const dayEvents = visibleList.filter(e => e.date === fullDate);
     dayEvents.forEach(e => {
-      cellHTML += `<div class="cell-item ${e.completed ? 'done' : ''}" title="${escapeHtml(e.title)}" onclick="editEvent('${e.id}', event)">${escapeHtml(e.title)}</div>`;
+      cellHTML += `<div class="cell-item kind-${categoryKind(e.category)} ${e.completed ? 'done' : ''}" title="${escapeHtml(e.title)}" onclick="editEvent('${e.id}', event)">${escapeHtml(e.title)}</div>`;
     });
 
     cell.innerHTML = cellHTML;
@@ -1103,7 +1104,7 @@ function setupEventListeners() {
 
   // Action Buttons
   document.getElementById('btn-add-event').addEventListener('click', () => {
-    document.getElementById('modal-title').textContent = '➕ 新增事項';
+    document.getElementById('modal-title').textContent = '新增事項';
     document.getElementById('event-id-hidden').value = '';
     document.getElementById('event-form').reset();
     document.getElementById('event-date').value = formatDate(new Date());
@@ -1202,7 +1203,7 @@ window.editEvent = function(id, e) {
   const item = eventsData.find(x => x.id === id);
   if (!item) return;
 
-  document.getElementById('modal-title').textContent = '✏️ 編輯事項';
+  document.getElementById('modal-title').textContent = '編輯事項';
   document.getElementById('event-id-hidden').value = item.id;
   document.getElementById('event-date').value = item.date;
   document.getElementById('event-title').value = item.title;
@@ -1227,6 +1228,16 @@ window.deleteEvent = function(id, e) {
     render();
   }
 };
+
+const WEEKDAY_NAMES = '日一二三四五六';
+
+// Groups free-text categories into the four colour kinds used by the stylesheet
+function categoryKind(category) {
+  if (['放假', '紀念日'].includes(category)) return 'rest';
+  if (['考試', '成績', '繳費', '申請', '註冊', '選課'].includes(category)) return 'due';
+  if (['校務', '課程', '開學'].includes(category)) return 'work';
+  return 'self';
+}
 
 function parseDate(str) {
   if (!str) return null;
