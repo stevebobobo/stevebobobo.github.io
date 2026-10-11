@@ -8,17 +8,17 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Microsoft+JhengHei+UI:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <div class="app-container">
     <!-- Header Controls Bar (Original Style) -->
     <header class="app-header">
       <div class="header-brand">
-        <span class="logo-text">📅 綜合行事曆</span>
+        <span class="logo-text">綜合行事曆</span>
         <span class="header-today" id="header-today-text">今天：2026-08-05</span>
       </div>
 
@@ -60,7 +60,7 @@
         </div>
 
         <button id="btn-refresh" class="btn btn-primary-indigo">
-          重新整理 🔄
+          <i class="fa-solid fa-rotate"></i> 重新整理
         </button>
       </div>
     </header>
@@ -69,16 +69,16 @@
     <div class="sub-toolbar">
       <div class="action-buttons">
         <button id="btn-add-event" class="btn btn-success">
-          ➕ 新增事項
+          <i class="fa-solid fa-plus"></i> 新增事項
         </button>
         <button id="btn-toggle-done" class="btn btn-primary">
-          ✔️ 切換完成狀態
+          <i class="fa-solid fa-check"></i> 切換完成狀態
         </button>
         <button id="btn-export-json" class="btn btn-warning">
-          💾 導出 JSON 備份
+          <i class="fa-solid fa-download"></i> 導出 JSON 備份
         </button>
         <button id="btn-reset-default" class="btn btn-secondary">
-          🔄 重置為預設
+          <i class="fa-solid fa-rotate-left"></i> 重置為預設
         </button>
       </div>
 
@@ -92,10 +92,10 @@
         <!-- View Switcher -->
         <div class="view-switcher">
           <button class="view-tab active" id="tab-list-btn">
-            📋 表格列表模式
+            列表
           </button>
           <button class="view-tab" id="tab-month-btn">
-            📆 月曆檢視模式
+            月曆
           </button>
         </div>
       </div>
@@ -110,12 +110,12 @@
           <table class="calendar-table">
             <thead>
               <tr>
-                <th style="width: 140px; text-align: center;">日期 🗓️</th>
-                <th style="width: 120px; text-align: center;">距今天 ⏳</th>
-                <th style="width: 120px; text-align: center;">分類 📌</th>
-                <th style="text-align: left;">事項內容 📝</th>
-                <th style="width: 110px; text-align: center;">狀態 ✅</th>
-                <th style="width: 110px; text-align: center;">操作 ⚙️</th>
+                <th style="width: 140px; text-align: center;">日期</th>
+                <th style="width: 120px; text-align: center;">距今天</th>
+                <th style="width: 120px; text-align: center;">分類</th>
+                <th style="text-align: left;">事項內容</th>
+                <th style="width: 110px; text-align: center;">狀態</th>
+                <th style="width: 110px; text-align: center;">操作</th>
               </tr>
             </thead>
             <tbody id="calendar-table-body">
@@ -125,15 +125,13 @@
         </div>
 
         <div class="table-footer">
-          <span id="status-bar-text" class="status-text">📊 載入中...</span>
+          <span id="status-bar-text" class="status-text">載入中...</span>
           <div class="color-legend">
-            <span class="legend-badge badge-today">🔥 今天</span>
-            <span class="legend-badge badge-urgent">緊急 (&lt;=3天)</span>
-            <span class="legend-badge badge-holiday">放假</span>
-            <span class="legend-badge badge-exam">考試</span>
-            <span class="legend-badge badge-grade">成績</span>
-            <span class="legend-badge badge-affairs">校務/課程</span>
-            <span class="legend-badge badge-done">已完成</span>
+            <span class="legend-badge kind-work">課程・校務</span>
+            <span class="legend-badge kind-due">考試・期限</span>
+            <span class="legend-badge kind-rest">放假</span>
+            <span class="legend-badge kind-self">個人</span>
+            <span class="legend-badge legend-urgent">三天內</span>
           </div>
         </div>
       </section>
@@ -165,7 +163,7 @@
   <div class="modal-overlay" id="event-modal">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3 id="modal-title">➕ 新增事項</h3>
+        <h3 id="modal-title">新增事項</h3>
         <button class="close-btn" id="close-modal-btn">&times;</button>
       </div>
       <form id="event-form">
@@ -199,12 +197,12 @@
         </label>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" id="cancel-modal-btn">取消</button>
-          <button type="submit" class="btn btn-success" id="submit-modal-btn">💾 儲存事項</button>
+          <button type="submit" class="btn btn-success" id="submit-modal-btn">儲存事項</button>
         </div>
       </form>
     </div>
   </div>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
