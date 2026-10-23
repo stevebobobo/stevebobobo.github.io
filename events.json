@@ -959,5 +959,14 @@
         "target": "all",
         "source": "user",
         "completed": false
+    },
+    {
+        "id": "user-2026102701",
+        "date": "2026-10-27",
+        "title": "打給勞保局 (02)2396-1266（報姊姊唐乙仁身分證字號+生日）：①查國民年金有沒有漏繳的期別、金額、補繳方式與利息 ②問能否用我的帳戶辦轉帳代繳、要準備什麼（約定書、兩人身分證、我的存摺印鑑）",
+        "category": "繳費",
+        "target": "all",
+        "source": "user",
+        "completed": false
     }
 ]
