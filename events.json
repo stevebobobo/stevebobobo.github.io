@@ -968,5 +968,14 @@
         "target": "all",
         "source": "user",
         "completed": false
+    },
+    {
+        "id": "user-2026102702",
+        "date": "2026-10-27",
+        "title": "打電話給兆豐銀行、永豐銀行，開通銀行 App",
+        "category": "個人",
+        "target": "all",
+        "source": "user",
+        "completed": false
     }
 ]
