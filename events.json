@@ -986,5 +986,14 @@
         "target": "all",
         "source": "user",
         "completed": false
+    },
+    {
+        "id": "user-2026110201",
+        "date": "2026-11-02",
+        "title": "打給華邦人資（或104詢問企業）：10/12應徵高雄報表系統開發／系統整合工程師，eHR帳號設定連結10/15已過期，請重寄",
+        "category": "求職",
+        "target": "teacher",
+        "source": "user",
+        "completed": false
     }
 ]
