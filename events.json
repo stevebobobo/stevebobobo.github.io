@@ -1040,5 +1040,122 @@
     "target": "all",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-guwen-20261107",
+    "date": "2026-11-07",
+    "title": "古文說道：重新授權 YouTube 上傳，並將 OAuth 改為正式發布（本人操作）",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261108",
+    "date": "2026-11-08",
+    "title": "古文說道：定好資料庫欄位，完成第 1 章互證範例",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261109",
+    "date": "2026-11-09",
+    "title": "古文說道：開始每週 2～3 支直式 Shorts，建好播放清單",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261115",
+    "date": "2026-11-15",
+    "title": "古文說道：確認第 21～40 章，排程上傳（第 21 章 11/20 發布）",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261130",
+    "date": "2026-11-30",
+    "title": "古文說道：資料庫完成前 20 章互證",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261201",
+    "date": "2026-12-01",
+    "title": "古文說道：Leo 註解版試播開始，選 10 章並用本人聲音錄音",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261205",
+    "date": "2026-12-05",
+    "title": "古文說道：確認第 41～60 章，排程上傳（第 41 章 12/10 發布）",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261225",
+    "date": "2026-12-25",
+    "title": "古文說道：確認第 61～81 章，排程上傳（第 61 章 12/30 發布）",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20261231",
+    "date": "2026-12-31",
+    "title": "古文說道：完成 10 支註解版試播，比較觀看時間與留言",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20270115",
+    "date": "2027-01-15",
+    "title": "古文說道：整合版輸出完成（統一第 01～20 章規格，加章節時間軸）",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20270119",
+    "date": "2027-01-19",
+    "title": "古文說道：第 81 章發布，每日系列完結",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20270120",
+    "date": "2027-01-20",
+    "title": "古文說道：發布整合版（全本、道經 1～37、德經 38～81）",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-guwen-20270131",
+    "date": "2027-01-31",
+    "title": "古文說道：決定註解版是否做全系列；查會員資格，開始存會員內容 8～12 份",
+    "category": "古文說道",
+    "target": "all",
+    "source": "user",
+    "completed": false
   }
 ]
