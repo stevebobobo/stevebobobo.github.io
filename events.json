@@ -1148,5 +1148,23 @@
     "target": "all",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-2026110401",
+    "date": "2026-11-04",
+    "title": "購買實習材料",
+    "category": "課程",
+    "target": "teacher",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-2026110402",
+    "date": "2026-11-04",
+    "title": "繳交雨林計畫上課證明",
+    "category": "課程",
+    "target": "teacher",
+    "source": "user",
+    "completed": false
   }
 ]
