@@ -1202,5 +1202,14 @@
     "target": "teacher",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-2026121101",
+    "date": "2026-12-11",
+    "title": "媽媽富邦產險保費繳費截止（保單11/11已到期，未繳）",
+    "category": "繳費",
+    "target": "all",
+    "source": "user",
+    "completed": false
   }
 ]
