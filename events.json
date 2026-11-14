@@ -1193,5 +1193,14 @@
     "target": "all",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-2026112701",
+    "date": "2026-11-27",
+    "title": "BYOA AI Agent 實戰營 台南場（13:30~16:30，台南貿協會議室；訂單319701；自備筆電；15:30有課需15:15提前離開，完課證明待謝小姐回覆）",
+    "category": "研習",
+    "target": "teacher",
+    "source": "user",
+    "completed": false
   }
 ]
