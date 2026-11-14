@@ -1211,5 +1211,32 @@
     "target": "all",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-2026111691",
+    "date": "2026-11-16",
+    "title": "提醒：繳媽媽富邦產險保費（12/11截止）",
+    "category": "繳費",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-2026113091",
+    "date": "2026-11-30",
+    "title": "提醒：媽媽富邦產險保費繳了沒？（12/11截止）",
+    "category": "繳費",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-2026120791",
+    "date": "2026-12-07",
+    "title": "最後提醒：媽媽富邦產險保費本週五12/11截止",
+    "category": "繳費",
+    "target": "all",
+    "source": "user",
+    "completed": false
   }
 ]
