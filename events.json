@@ -1166,5 +1166,32 @@
     "target": "teacher",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-2026112201",
+    "date": "2026-11-22",
+    "title": "黑皮AI講師群分享會：Leo 主講 Codex 自動化（09:30~11:00）",
+    "category": "活動",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-2026120601",
+    "date": "2026-12-06",
+    "title": "黑皮AI分享會：傅老師場（09:00~10:30，參加拿證照）",
+    "category": "活動",
+    "target": "all",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-2026122701",
+    "date": "2026-12-27",
+    "title": "跟王俊凱有約（16:00）",
+    "category": "個人",
+    "target": "all",
+    "source": "user",
+    "completed": false
   }
 ]
