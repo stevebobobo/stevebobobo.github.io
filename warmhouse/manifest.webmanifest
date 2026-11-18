@@ -1,0 +1,14 @@
+{
+  "name": "暖屋定食",
+  "short_name": "暖屋定食",
+  "description": "暖屋定食學生展示 App",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fcfbf7",
+  "theme_color": "#315a46",
+  "lang": "zh-Hant",
+  "icons": [
+    { "src": "assets/logo.png", "sizes": "1536x1024", "type": "image/png", "purpose": "any" },
+    { "src": "assets/Pet.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
