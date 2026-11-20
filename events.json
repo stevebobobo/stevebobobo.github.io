@@ -1238,5 +1238,23 @@
     "target": "all",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-2026112401",
+    "date": "2026-11-24",
+    "title": "去機械系拿萬潤得獎證明（申請學校補助款用）",
+    "category": "申請",
+    "target": "teacher",
+    "source": "user",
+    "completed": false
+  },
+  {
+    "id": "user-2026112402",
+    "date": "2026-11-24",
+    "title": "找資工系主任簽名（萬潤補助款申請）",
+    "category": "申請",
+    "target": "teacher",
+    "source": "user",
+    "completed": false
   }
 ]
