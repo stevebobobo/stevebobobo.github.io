@@ -1256,5 +1256,14 @@
     "target": "teacher",
     "source": "user",
     "completed": false
+  },
+  {
+    "id": "user-2026112202",
+    "date": "2026-11-22",
+    "title": "驗證 Panasonic 競賽程式（報告書 11/25 截止）",
+    "category": "個人",
+    "target": "all",
+    "source": "user",
+    "completed": false
   }
 ]
